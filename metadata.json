@@ -1,0 +1,8 @@
+{
+  "name": "LAOS JOB - No.1 Recruitment Platform",
+  "description": "A modern, professional job recruitment platform for Laos and the ASEAN region, featuring advanced search, multi-language support, and high-end animations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
