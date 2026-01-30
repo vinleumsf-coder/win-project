@@ -1,16 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="lo"> <!-- 保留你原始的老挝语语言标识，支撑网站老挝语定位 -->
+<html lang="lo">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LAOS JOB | No.1 Job Platform in Laos</title> <!-- 保留你原始标题 -->
+    <title>LAOS JOB | No.1 Job Platform in Laos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       body {
-        /* 【仅优化字体优先级，不改动其他样式】：优先使用 Noto Sans Lao 老挝语字体，确保老挝文字正常渲染
-           你的原始写法是 Inter 优先，会导致老挝文字显示异常，这是支撑老挝语网站的必要修复 */
+        /* 保留老挝语字体优先，确保文字正常渲染 */
         font-family: 'Noto Sans Lao', 'Inter', sans-serif;
       }
       .glass-morphism {
@@ -82,11 +81,12 @@
         scrollbar-width: none;
       }
     </style>
-    <!-- 【已删除错误1】：移除无效的 React importmap （无对应环境，导致报错） -->
-    <!-- 【已删除错误2】：移除不存在的 /index.css 引用 （导致 404 报错） -->
+    <!-- 移除：Vite 项目不需要手动写 importmap（由 Vite 自动处理 React 依赖） -->
+    <!-- 移除：不存在的 /index.css 引用（后续可在 src 目录下创建并导入） -->
   </head>
   <body class="bg-gray-50 text-slate-900 overflow-x-hidden">
     <div id="root"></div>
-    <!-- 【已删除错误3】：移除无法解析的 /index.tsx 引用 （导致页面空白，核心错误） -->
+    <!-- 修正：脚本路径改为 src/index.tsx（Vite 入口文件，放在 src 目录下），去掉 type="module"（Vite 自动处理） -->
+    <script src="/src/index.tsx"></script>
   </body>
 </html>
